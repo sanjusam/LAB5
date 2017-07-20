@@ -6,6 +6,8 @@ clean:
 	@rm -rf  ./cs/cs430/lab4/DatabaseAccess.class
 	@rm -rf  ./cs/cs430/lab4/Lab5Utils.class
 	@rm -rf  ./cs/cs430/lab4/MemberDetails.class
+	@rm -rf  ./cs/cs430/lab4/BookSearch.class
+
 
 compile:
 
@@ -13,3 +15,4 @@ compile:
 	@javac -d . ./src/cs/cs430/lab4/Lab5Utils.java
 	@javac -d . ./src/cs/cs430/lab4/DatabaseAccess.java
 	@javac -d . ./src/cs/cs430/lab4/MemberDetails.java
+	@javac -d . ./src/cs/cs430/lab4/BookSearch.java

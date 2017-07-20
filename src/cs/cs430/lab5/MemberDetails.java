@@ -17,7 +17,7 @@ public class MemberDetails {
     public boolean memberExists(final String memberId) {
         final String getMemberSql = "select 1 from member where memberID = " + memberId;
         ResultSet resultSet = Lab5Utils.executeSelect(getMemberSql);
-        return Lab5Utils.checkIRecordFound(resultSet);
+        return Lab5Utils.checkRecordFound(resultSet);
     }
 
     public int addMember(final String memberFirstName, final String memberLastName, final String dateOfBirth,

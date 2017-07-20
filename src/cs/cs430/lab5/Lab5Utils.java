@@ -2,6 +2,8 @@ package cs.cs430.lab5;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Lab5Utils {
     private static  DatabaseAccess databaseAccess = DatabaseAccess.getInstance();
@@ -36,7 +38,7 @@ public class Lab5Utils {
         return ret;
     }
 
-    public static boolean checkIRecordFound(final ResultSet resultSet) {
+    public static boolean checkRecordFound(final ResultSet resultSet) {
         boolean found = false;
         try {
             if (resultSet.next()) {
@@ -46,6 +48,19 @@ public class Lab5Utils {
             found = false;
         }
         return found;
+    }
+
+    public static List<String> getAllColumnsAsString(final ResultSet resultSet, final String columnName) {
+        final List<String> returnedValue = new ArrayList<>();
+//        int columnValues = Lab5Utils.FAILURE;
+        try {
+            if (resultSet.next()) {
+//                columnValues = resultSet.getInt(columnName);
+            }
+        } catch (final Exception exception) {
+//            columnValues = Lab5Utils.FAILURE;
+        }
+        return returnedValue;
     }
 
     public static int getColumnAsInt(final ResultSet resultSet, final String columnName) {
